@@ -25,6 +25,6 @@ settings = Settings()
 logging.basicConfig(
     level=logging.DEBUG,
     # filename='bot_log.log',
-    format="========%(asctime)s - %(filename)s - %(funcName)s - %(levelname)s: %(message)s"
+    format="%(asctime)s - %(name)s - %(filename)s - %(funcName)s - %(levelname)s: %(message)s"
 )
-logger = logging.getLogger()
+logger = logging.getLogger(__name__)
