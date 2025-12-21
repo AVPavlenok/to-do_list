@@ -101,7 +101,7 @@ async def complete_task(task_id: int, user_id: int = Depends(get_user_id)):
     return "New task is completed!"
 
 
-@app.delete('/tasks/{task_id}', status_code=status.HTTP_200_OK, summary='Delete task bu id!')
+@app.delete('/tasks/{task_id}', status_code=status.HTTP_200_OK, summary='Delete task by id!')
 async def delete_task(task_id: int, user_id: int = Depends(get_user_id)):
     try:
         await delete_item(model=Task, user_id=user_id, id=task_id)
