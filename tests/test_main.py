@@ -119,3 +119,9 @@ def test_delete_task(client):
     response = client.delete('http://localhost:8080/tasks/1')
 
     assert response.status_code == 200
+
+
+def test_logout(client):
+    response = client.post('http://localhost:8080/logout')
+
+    assert response.status_code == 200
