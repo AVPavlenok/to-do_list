@@ -10,9 +10,6 @@ class TaskOut(BaseModel):
     task: str
     is_complete: bool
 
-    class Config:
-        from_attributes = True
-
 
 class TaskChange(BaseModel):
     id: int
@@ -32,9 +29,6 @@ class UserBase(BaseModel):
 
 class UserPublic(BaseModel):
     name: str
-
-    class Config:
-        from_attributes = True
 
 
 class UserCreate(UserBase):
